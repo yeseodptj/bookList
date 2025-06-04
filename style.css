@@ -1,39 +1,18 @@
 body {
     font-family: sans-serif;
-    padding: 20px;
     background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
   }
+  
   .book-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 한 줄에 5개 */
-    gap: 24px; /* 카드 사이 여백 */
-    justify-items: center; /* 가운데 정렬 */
+    grid-template-columns: repeat(5, 1fr); /* 기본: 5개 */
+    gap: 24px;
+    justify-items: center;
     padding: 20px;
   }
-  .book {
-    width: 150px;
-    position: relative;
-    cursor: pointer;
-  }
-  .book img {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.2);
-  }
-  .description {
-    display: none;
-    position: absolute;
-    top: 170px;
-    left: 0;
-    background: #fff;
-    padding: 10px;
-    border: 1px solid #ddd;
-    width: 200px;
-    z-index: 10;
-  }
-  .book:hover .description {
-    display: block;
-  }
+  
   .book img {
     width: 160px;
     height: 240px;
@@ -41,21 +20,45 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   }
-
+  
+  .description {
+    display: none;
+    position: absolute;
+    top: 250px;
+    left: 0;
+    background: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    width: 200px;
+    z-index: 10;
+    font-size: 14px;
+  }
+  
+  .book {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .book:hover .description {
+    display: block;
+  }
+  
+  /* ✅ 반응형 그리드 설정 추가 */
   @media screen and (max-width: 1024px) {
     .book-grid {
-      grid-template-columns: repeat(3, 1fr); /* 태블릿: 3개씩 */
+      grid-template-columns: repeat(3, 1fr);
     }
   }
   
   @media screen and (max-width: 768px) {
     .book-grid {
-      grid-template-columns: repeat(2, 1fr); /* 작은 화면: 2개씩 */
+      grid-template-columns: repeat(2, 1fr);
     }
   }
   
   @media screen and (max-width: 480px) {
     .book-grid {
-      grid-template-columns: repeat(1, 1fr); /* 모바일: 1개씩 */
+      grid-template-columns: repeat(1, 1fr);
     }
   }
+  
