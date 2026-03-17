@@ -62,3 +62,21 @@ body {
     }
   }
   
+  .status {
+  margin-top: 8px;
+  padding: 4px 8px;
+  font-size: 14px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.book[data-status="available"] .status {
+  background-color: #e0ffe0;
+  color: #228b22;
+}
+
+.book[data-status="borrowed"] .status {
+  background-color: #ffe0e0;
+  color: #cc0000;
+}
