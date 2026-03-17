@@ -22,6 +22,12 @@ body {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
+h1 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
 .description {
   display: none;
   position: absolute;
@@ -33,6 +39,7 @@ body {
   width: 200px;
   z-index: 10;
   font-size: 14px;
+  line-height: 1.6;
 }
 
 .book {
@@ -45,6 +52,10 @@ body {
 
 .book:hover {
   transform: translateY(-4px);
+}
+
+.book:hover .description {
+  display: block;
 }
 
 /*반응형 그리드 설정 추가*/
@@ -83,15 +94,4 @@ body {
 .book[data-status="borrowed"] .status {
   background-color: #ffe0e0;
   color: #cc0000;
-}
-
-h1 {
-  font-size: 28px;
-  margin-bottom: 30px;
-  font-weight: 700;
-}
-
-.description {
-  font-size: 14px;
-  line-height: 1.6;
 }
