@@ -22,6 +22,12 @@ body {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
+h1 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
 .description {
   display: none;
   position: absolute;
