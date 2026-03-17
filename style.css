@@ -87,3 +87,8 @@ h1 {
   background-color: #ffe0e0;
   color: #cc0000;
 }
+
+.book[data-status="loading"] .status {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
