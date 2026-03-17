@@ -5,34 +5,6 @@
     <title>도서 목록</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <script>
-    fetch(
-      "https://script.google.com/macros/s/AKfycbw1MeXiG8VwVfHJFeUya1m8AmhpUAtO6gg3B67R9tMai_k_kLPP9QprMYCURKhDyKolOg/exec",
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        data.forEach((book) => {
-          const el = document.querySelector(
-            `.book img[src="${book.id}.jpg"]`,
-          )?.parentElement;
-
-          if (!el) return;
-
-          const statusBox = el.querySelector(".status");
-
-          if (book.status === "borrowed") {
-            el.dataset.status = "borrowed";
-            statusBox.innerText = "❌ 대여중";
-          }
-
-          if (book.status === "available") {
-            el.dataset.status = "available";
-            statusBox.innerText = "✅ 대여 가능";
-          }
-        });
-      });
-  </script>
-
   <body>
     <h1>📚 도서 목록</h1>
     <div class="book-grid">
@@ -132,5 +104,6 @@
         </div>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
